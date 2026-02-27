@@ -21,7 +21,11 @@ export default class UseLists extends React.Component {
     return (
       <div>
         {listsapi.map((list) => (
-          <ListComponent key={list.id} listName={list.name} />
+          <ListComponent
+            key={list.id}
+            listName={list.name}
+            items={list.item_set}
+          />
         ))}
       </div>
     );
