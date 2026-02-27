@@ -47,28 +47,39 @@ export default class LoginComponent extends React.Component {
     var token = localStorage.getItem("token");
     if (!token) {
       return (
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Name:
-            <input
-              type="text"
-              value={this.state.username}
-              onChange={this.handleChange}
-            />
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.handleChangePassword}
-            />
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
+        <div className="login-container">
+          <form className="login-form" onSubmit={this.handleSubmit}>
+            <h2>Login</h2>
+            <div className="input-group">
+              <input
+                type="text"
+                placeholder="Username"
+                value={this.state.username}
+                onChange={this.handleChange}
+              />
+              <div className="input-group">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  value={this.state.password}
+                  onChange={this.handleChangePassword}
+                />
+              </div>
+            </div>
+            <input type="submit" value="Submit" className="login-button" />
+          </form>
+        </div>
       );
     } else {
       return (
         <div>
           <UseLists />
-          <button onClick={() => this.logout()}>Logout</button>
+          <button
+            className="logout-button top-right"
+            onClick={() => this.logout()}
+          >
+            Logout
+          </button>
         </div>
       );
     }

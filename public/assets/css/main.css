@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #5f2c82, #49a09d);
+  height: 100vh;
+}
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  background: white;
+  padding: 40px;
+  width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.login-form h2 {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #5f2c82;
+  box-shadow: 0 0 0 3px rgba(95, 44, 130, 0.1);
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #5f2c82, #49a09d);
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.list-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* Card */
+.list-card {
+  width: 400px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.list-title {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+/* Lista */
+.list-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Item individual */
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fc;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.list-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Nome */
+.item-name {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Badge de status */
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Status finalizado */
+.done {
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+}
+
+/* Status pendente */
+.pending {
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+}
+
+.logout-button.top-right {
+  position: fixed; /* pode trocar por absolute se quiser */
+  top: 20px;
+  right: 30px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ff4d4d, #b30000);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.logout-button.top-right:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(179, 0, 0, 0.3);
+}
