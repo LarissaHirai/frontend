@@ -1,5 +1,6 @@
 import React from "react";
 import ListComponent from "./ListComponent";
+import LoginComponent from "./LoginComponent";
 
 export default class UseLists extends React.Component {
   state = { lists: [], loading: true };
@@ -18,16 +19,21 @@ export default class UseLists extends React.Component {
   }
   render() {
     const listsapi = this.state.lists;
-    return (
-      <div>
-        {listsapi.map((list) => (
-          <ListComponent
-            key={list.id}
-            listName={list.name}
-            items={list.item_set}
-          />
-        ))}
-      </div>
-    );
+    var token = "";
+    if (token === "") {
+      return <LoginComponent />;
+    } else {
+      return (
+        <div>
+          {listsapi.map((list) => (
+            <ListComponent
+              key={list.id}
+              listName={list.name}
+              items={list.item_set}
+            />
+          ))}
+        </div>
+      );
+    }
   }
 }
