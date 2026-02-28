@@ -1,4 +1,4 @@
-# ⚛️ frontend/README.md
+# ⚛️ frontend
 
 ```markdown
 # Frontend - Aplicação React
